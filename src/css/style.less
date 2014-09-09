@@ -1,0 +1,58 @@
+@import (reference) "./imports/mixins.less";
+@import (reference) "./imports/variables.less";
+@import "./imports/animation.less";
+@import "./imports/reset.less";
+@import "./imports/util.less";
+@import "./imports/typography.less";
+
+// Vars
+@card_width: 63px;
+@card_height: 88px;
+
+html, body {
+  background-color: darken(#fff, 10%);
+  height: 100%;
+}
+
+.card {
+  box-sizing: border-box;
+  position: absolute;
+  .size(@card_width * 2, @card_height * 2);
+  box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.35);
+}
+
+.CardApp {
+  position: relative;
+  height: 100%;
+}
+
+.CardDeck {
+  &:extend(.card);
+
+  top: 50px;
+  left: 50px;
+
+  background-color: darken(#fff, 50%);
+  border: solid 1px darken(#fff, 80%);
+
+  &:hover {
+    background-color: darken(#fff, 40%);
+  }
+}
+
+.styleCard(@color) {
+  background-color: @color;
+  border: solid 1px darken(@color, 30%);
+
+  &:hover {
+    background-color: lighten(@color, 10%);
+  }
+}
+
+.PlayingCard {
+  &:extend(.card);
+
+  &--red   { .styleCard(hsl(360, 70%, 60%)); }
+  &--green { .styleCard(hsl(125, 70%, 60%)); }
+  &--blue  { .styleCard(hsl(240, 70%, 60%)); }
+}

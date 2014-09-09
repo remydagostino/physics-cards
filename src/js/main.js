@@ -85,17 +85,15 @@ var createCardDeck = function() {
   };
 };
 
-// TEST ################################
+// Terrible terrible global
 var springSystem = new rebound.SpringSystem();
-
-// #####################################
 
 // Fills out the UI data for a card
 var createCardUi = function(card) {
   var springX, springY, posUpdates, posProp;
 
-  springY = springSystem.createSpring(30, 10),
-  springX = springSystem.createSpring(30, 10),
+  springY = springSystem.createSpring(30, 10);
+  springX = springSystem.createSpring(30, 10);
 
   // Turn the springs into streams of positions
   posUpdates = bacon.fromBinder(function(sink) {
@@ -111,7 +109,9 @@ var createCardUi = function(card) {
       }
     });
 
-    return function unsub() { };
+    return function unsub() {
+
+    };
   });
 
   // collate them
@@ -184,7 +184,10 @@ var createPlayingHand = function(cardProp) {
     replaceChildren(el, R.pluck('el', cardEls));
 
     R.forEach.idx(function(cardEl, i) {
-      moveCardTo(cardEl, 100 * i, 300);
+      // Quick and dirty distribution
+      var xPos = (Math.min((500 / cardEls.length), 100) * i) + 50;
+
+      moveCardTo(cardEl, xPos, 300);
     }, cardEls);
   });
 

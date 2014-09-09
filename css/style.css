@@ -269,6 +269,13 @@ body {
   width: 126px;
   height: 176px;
   box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.35);
+  padding: 1em;
+  font-size: 2em;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .CardApp {
   position: relative;
@@ -279,6 +286,7 @@ body {
   left: 50px;
   background-color: #808080;
   border: solid 1px #333333;
+  color: #ffffff;
 }
 .CardDeck:hover {
   background-color: #999999;
@@ -286,6 +294,7 @@ body {
 .PlayingCard--red {
   background-color: #e05252;
   border: solid 1px #821717;
+  color: #ffffff;
 }
 .PlayingCard--red:hover {
   background-color: #e87d7d;
@@ -293,6 +302,7 @@ body {
 .PlayingCard--green {
   background-color: #52e05e;
   border: solid 1px #178220;
+  color: #000000;
 }
 .PlayingCard--green:hover {
   background-color: #7de886;
@@ -300,6 +310,7 @@ body {
 .PlayingCard--blue {
   background-color: #5252e0;
   border: solid 1px #171782;
+  color: #ffffff;
 }
 .PlayingCard--blue:hover {
   background-color: #7d7de8;

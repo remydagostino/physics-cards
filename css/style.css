@@ -1,0 +1,306 @@
+.bounce-in {
+  -webkit-animation: bounce-in 0.3s ease-in-out 0s;
+          animation: bounce-in 0.3s ease-in-out 0s;
+}
+.blow-out {
+  -webkit-animation: blow-out 0.3s linear 0s;
+          animation: blow-out 0.3s linear 0s;
+}
+/* ========================================
+  Keyframes 
+  =======================================*/
+@-webkit-keyframes bounce-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes blow-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+@keyframes blow-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+.flex-center,
+.center-within-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.full-height,
+.center-within-container {
+  height: 100%;
+}
+.full-width,
+.center-within-container {
+  width: 100%;
+}
+.center-within-container {
+  position: absolute;
+}
+.cover-absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.4;
+}
+p {
+  line-height: inherit;
+  margin-bottom: 1.5em;
+}
+small,
+.small {
+  font-size: 0.75em;
+}
+h1,
+.h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+h2,
+.h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+h3,
+.h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+html,
+body {
+  background-color: #e6e6e6;
+  height: 100%;
+}
+.card,
+.CardDeck,
+.PlayingCard {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  position: absolute;
+  width: 126px;
+  height: 176px;
+  box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.35);
+}
+.CardApp {
+  position: relative;
+  height: 100%;
+}
+.CardDeck {
+  top: 50px;
+  left: 50px;
+  background-color: #808080;
+  border: solid 1px #333333;
+}
+.CardDeck:hover {
+  background-color: #999999;
+}
+.PlayingCard--red {
+  background-color: #e05252;
+  border: solid 1px #821717;
+}
+.PlayingCard--red:hover {
+  background-color: #e87d7d;
+}
+.PlayingCard--green {
+  background-color: #52e05e;
+  border: solid 1px #178220;
+}
+.PlayingCard--green:hover {
+  background-color: #7de886;
+}
+.PlayingCard--blue {
+  background-color: #5252e0;
+  border: solid 1px #171782;
+}
+.PlayingCard--blue:hover {
+  background-color: #7d7de8;
+}
